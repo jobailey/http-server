@@ -1,21 +1,18 @@
-import socket
-HOST, PORT = '', 8888
+from http.server import HTTPServer, BaseHTTPRequestHandler
 
-listen_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-listen_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-listen_socket.bind((HOST, PORT))
-listen_socket.listen(1)
+class Serve(BaseHTTPRequestHandler):
 
-print('Serving HTTP on port %s ...' % PORT)
-while True:
-  client_connection, client_address = listen_socket.accept()
-  request = client_connection.recv(1024)
-  print(request)
-  
-http_response = """\ 
-HTTP/1.1 200 OK
-Hello, World!
-"""
-client_connection.sendall(http_response)
-client_connection.close()
-"""NEED PYTHON 3""" 
+  def do_GET(self):
+    if self.path == '/':
+      self.path = '/index.html'
+    try:
+        file_to_open = open(self.path[1:]).read()
+        self.send_response(200)
+    except: 
+        file_to_open = "File not found"
+        self.send_response(404)
+    self.end_headers()
+    self.wfile.write(bytes(file_to_open, 'utf-8'))
+
+httpd = HTTPServer(('localhost', 8080), Serve)
+httpd.serve_forever()
