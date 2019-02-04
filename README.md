@@ -17,6 +17,6 @@ $ telnet localhost 8080
 
 ## Dependencies
 
-[Telnet Client](https://www.alltechbuzz.net/install-telnet-windows-10/)
-(For Windows) Inbound rule allowing port access through Windows Firewall 
-[Python 3](https://www.python.org/downloads/)
+- [Telnet Client](https://www.alltechbuzz.net/install-telnet-windows-10/)
+- (For Windows) Inbound rule allowing port access through Windows Firewall 
+- [Python 3](https://www.python.org/downloads/)
