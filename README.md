@@ -12,11 +12,13 @@ $ telnet localhost 8080
 
 ## Future Development
 - Deploy a web page for user registration
-- Implement HTML and CSS 
-- 
+- Authenticate user access
+- Implement HTML, CSS, and (possibly) JavaScript 
 
 ## Dependencies
 
 - [Telnet Client](https://www.alltechbuzz.net/install-telnet-windows-10/)
 - (For Windows) Inbound rule allowing port access through Windows Firewall 
 - [Python 3](https://www.python.org/downloads/)
+
+### Video Summary
