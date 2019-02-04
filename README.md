@@ -14,6 +14,7 @@ $ telnet localhost 8080
 - Deploy a web page for user registration
 - Authenticate user access
 - Implement HTML, CSS, and (possibly) JavaScript 
+- Ensure compatibility with router
 
 ## Dependencies
 
