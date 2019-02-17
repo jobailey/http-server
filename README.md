@@ -23,3 +23,4 @@ $ telnet localhost 8080
 - [Python 3](https://www.python.org/downloads/)
 
 ### Video Summary
+[Cycle 1 - HTTP Server](https://www.youtube.com/watch?v=to00rPKjScU&feature=youtu.be)
